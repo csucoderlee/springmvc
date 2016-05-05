@@ -20,6 +20,7 @@ public class InputProductController implements Controller {
 
         logger.info("inputProductController called");
 
-        return new ModelAndView("/jsp/a.jsp");
+        //只需要提供要返回的视图的名字,前缀和后缀由视图解析器去解析,详细的配置信息在spring-servlet.xml文件中
+        return new ModelAndView("a");
     }
 }
