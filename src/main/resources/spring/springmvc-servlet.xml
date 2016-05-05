@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<!-- 注意上面的xmlns:context 和 xsi:schemaLocation的对应关系 -->
+
+
+    <!-- 添加扫描器,扫描基于注解的控制器类 -->
+    <!-- base-package不要指定更广泛的包,避免spring扫描无关的包以及包下的类-->
+    <context:component-scan base-package="org.csu.coderlee.controller"/>
 
     <bean name="/a.action" class="org.csu.coderlee.controller.InputProductController" />
 
