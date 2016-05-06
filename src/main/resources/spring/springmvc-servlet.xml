@@ -10,8 +10,9 @@
 
 
     <!-- 添加扫描器,扫描基于注解的控制器类 -->
-    <!-- base-package不要指定更广泛的包,避免spring扫描无关的包以及包下的类-->
+    <!-- base-pacddfdkage不要指定更广泛的包,避免spring扫描无关的包以及包下的类-->
     <context:component-scan base-package="org.csu.coderlee.controller"/>
+    <context:component-scan base-package="org.csu.coderlee.service" />
 
     <bean name="/a.action" class="org.csu.coderlee.controller.InputProductController" />
 
