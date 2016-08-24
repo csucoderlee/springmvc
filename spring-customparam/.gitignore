@@ -1,6 +1,0 @@
-*.log
-target/
-.DS_Store
-.idea/
-spring-mvc.iml
-
