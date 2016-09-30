@@ -19,8 +19,13 @@ public class BeanFactoryTest {
 
     @Test
     public void testSimpleLoad(){
+
+        //读取配置文件beanFactory
         BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring/beanFactoryTest.xml"));
+
+        //根据beanFactoryTest.xml中的配置找到对应的类的配置,并且实例化
         MyTestBean bean = (MyTestBean) beanFactory.getBean("myTestBean");
+
         assertEquals("mytestmessage", bean.getTestStr());
     }
 }
