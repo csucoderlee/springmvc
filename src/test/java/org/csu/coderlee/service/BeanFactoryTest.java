@@ -1,5 +1,6 @@
-package org.csu.coderlee.bean;
+package org.csu.coderlee.service;
 
+import org.csu.coderlee.bean.MyTestBean;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -21,7 +22,7 @@ public class BeanFactoryTest {
     public void testSimpleLoad(){
 
         //读取配置文件beanFactory
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring/beanFactoryTest.xml"));
+        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring/applicationContext.xml"));
 
         //根据beanFactoryTest.xml中的配置找到对应的类的配置,并且实例化
         MyTestBean bean = (MyTestBean) beanFactory.getBean("myTestBean");
